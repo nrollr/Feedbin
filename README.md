@@ -15,9 +15,7 @@ Next, check your inbox for an email with subject: _"[Feedbin] Starred Items Expo
 
 - Edit `db_create.php` in the include/ directory, change “*username*”  and “*password*” if required.
   
-- Launch `db_create.php` from your browser (via [http://localhost/include/db_create.php](http://localhost/include/db_create.php) )
-  
-  to create the database and table structure
+- Launch `db_create.php` from your browser (via [http://localhost/include/db_create.php](http://localhost/include/db_create.php) ) to create the database and table structure
   
 - Edit `db_connect.php` in the include/ directory, change “*username*” , “*password*” if required.
   
@@ -34,7 +32,7 @@ This will parse the `starred.json` -file and insert the data into the database. 
 
 
 
-### Fetch XML feed:
+## Fetch XML feed:
 
 Complementary to the (initial) upload of starred articles in `.JSON` format, you can fetch additional starred articles through the XML feed.
 
