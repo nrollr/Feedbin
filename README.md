@@ -1,6 +1,6 @@
 # Feedbin starred articles
 
-This repository contains a set of scripts to backup all your starred articles from [Feedbin](https://feedbin.com/) to a MySQL database. Code has been tested with Apache/2.2.26 , PHP v.5.4.30 and MySQL v5.6.20
+This repository contains a set of scripts to backup all your starred articles from [Feedbin](https://feedbin.com/) to a MySQL database. Code has been tested with Apache/2.4.18 , PHP v.5.5.38 and MySQL v5.7.19
 
 First, head to the Feedbin [settings page](https://feedbin.com/settings/import_export). In the 'Export' -section, click `Export` next to 'Starred Articles'. Feedbin will return a notification:  _"Starred export has begun. You will receive an email with the download link shortly”_.
 
@@ -11,20 +11,18 @@ Next, check your inbox for an email with subject: _"[Feedbin] Starred Items Expo
 
 
 
-##### Setup of the MySQL database:
+### Setup of the MySQL database:
 
 - Edit `db_create.php` in the include/ directory, change “*username*”  and “*password*” if required.
   
-- Launch `db_create.php` from your browser (via [http://localhost/include/db_create.php](http://localhost/include/db_create.php) )
-  
-  to create the database and table structure
+- Launch `db_create.php` from your browser (via [http://localhost/include/db_create.php](http://localhost/include/db_create.php) ) to create the database and table structure
   
 - Edit `db_connect.php` in the include/ directory, change “*username*” , “*password*” if required.
   
 
 
 
-##### Load the JSON data:
+### Load the JSON data:
 
 Direct your browser to [http://localhost/data/import.php](http://localhost/data/import.php)
 
@@ -34,7 +32,7 @@ This will parse the `starred.json` -file and insert the data into the database. 
 
 
 
-### Fetch XML feed:
+## Fetch XML feed:
 
 Complementary to the (initial) upload of starred articles in `.JSON` format, you can fetch additional starred articles through the XML feed.
 
