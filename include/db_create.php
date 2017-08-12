@@ -2,7 +2,7 @@
     header("Content-type: text/html; charset=utf-8");
 
     ## Establish database connection
-	$db = new mysqli("localhost", "username", "password");  // Change according to your own settings
+	$db = new mysqli("hostname", "username", "password");  // Change according to your own settings
 	$db->set_charset("utf8");
 		if ($db->connect_errno) {
 	    	echo "Failed to connect to MySQL: (" . $db->connect_errno . ") " . $db->connect_error; }

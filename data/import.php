@@ -12,7 +12,7 @@
 	    $published = $row['published'];
         $date = strtotime($published); // Convert to Unix timestamp
       
-    ##Insert into mysql table
+    ##Insert into MySQL table
     $sql = "INSERT INTO `starred` ( `date`, `title`, `url`) VALUES('$date', '$title', '$url')";  
     mysqli_query($db,$sql);
       }    

@@ -1,6 +1,6 @@
 <?php
     header("Content-type: text/html; charset=utf-8");
-	$url ="https://feedbin.com/starred/THSYv5sdrKKOP92eQluQAQ.xml";  // Link to your own XML feed
+	$url ="https://feedbin.com/starred/<your-xlm-feed>.xml";  // Link to your own XML feed
 
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -14,7 +14,7 @@
 	// print_r($xml);
 
 	## Write items from XML to database 
-	$db = mysql_connect("localhost", "username", "password");  
+	$db = mysql_connect("hostname", "username", "password");  
 	mysql_select_db("Feedbin", $db) or die(mysql_error()); // Establish database connection
 
 	foreach($xml->channel->item as $row) {
